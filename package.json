@@ -1,0 +1,26 @@
+{
+    "name": "nba-locker",
+    "version": "1.0.0",
+    "description": "FiveM Boilerplate mit TypeScript, Client/Server/Shared Struktur",
+    "scripts": {
+        "build": "npm run build:client && npm run build:server && npm run build:shared",
+        "build:client": "cd client && tsc",
+        "build:server": "cd server && tsc",
+        "build:shared": "cd shared && tsc",
+        "watch": "concurrently \"npm run build:client -- --watch\" \"npm run build:server -- --watch\" \"npm run build:shared -- --watch\"",
+        "dev": "npm run watch",
+        "lint": "eslint . --ext .ts",
+        "clean": "rimraf dist"
+    },
+    "devDependencies": {
+        "@citizenfx/client": "^2.0.6594-1",
+        "@citizenfx/server": "^2.0.6594-1",
+        "@types/node": "^18.0.0",
+        "typescript": "^4.9.5",
+        "concurrently": "^8.0.1",
+        "rimraf": "^5.0.1",
+        "eslint": "^8.45.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0"
+    }
+}
